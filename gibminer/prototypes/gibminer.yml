@@ -1,4 +1,4 @@
-url: https://gitlab.soc.group-ib.com/d.d.volkov/minemeld-ti-integration
+url: https://github.com/whatcouldbepizza/minemeld-ti-integration
 description: >
   Sample extension for MineMeld.
 
@@ -20,7 +20,7 @@ prototypes:
       - extension
       - gibminer
     description: >
-      test prototype for youtubeminer.Miner, mines video of EEVblog
+      prototype for Group-IB Threat Intelligence feed poller
     config:
       polling_timeout: 200
       verify_cert: false

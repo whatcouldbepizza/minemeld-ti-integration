@@ -3,7 +3,7 @@
     "name": "gib-miner",
     "author": "Group-IB",
     "author_email": "dmitriy.v@group-ib.com.com",
-    "description": "Group-IB Threat Intelligence feeds mienr",
+    "description": "Group-IB Threat Intelligence feeds miner",
     "url": "https://gitlab.soc.group-ib.com/d.d.volkov/minemeld-ti-integration",
     "entry_points": {
         "minemeld_nodes": {
