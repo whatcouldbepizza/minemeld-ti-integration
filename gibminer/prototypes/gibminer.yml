@@ -1,0 +1,43 @@
+url: https://gitlab.soc.group-ib.com/d.d.volkov/minemeld-ti-integration
+description: >
+  Sample extension for MineMeld.
+
+prototypes:
+  eevblog:
+    author: Group-IB
+    class: gibminer.Miner
+    development_status: EXPERIMENTAL
+    node_type: miner
+    indicator_types:
+      - URL
+      - IPv4
+      - domain
+      - any
+      - md5
+      - sha256
+      - sha1
+    tags:
+      - extension
+      - gibminer
+    description: >
+      test prototype for youtubeminer.Miner, mines video of EEVblog
+    config:
+      polling_timeout: 200
+      verify_cert: false
+      last_file: /home/last.yml
+      feeds: accs, cards, imei, mules, ddos, domain, ssl, phishing, advert, mobileapp, phishingkit, tornodes, proxy, socks, leaks, threats
+      url: https://bt.group-ib.com/
+      api_username: <API_USERNAME>
+      api_key: <API_KEY>
+      # age out of indicators
+      # disabled, removed when they disappear from the channel
+      age_out:
+        # Number of seconds between successive age out checks
+        interval: 3600
+        # If true, indicators are immediatly deleted when they disappear from incoming feed.
+        sudden_death: false
+        # After this interval indicator is considered as aged out.
+        default: first_seen+1d 
+      # flag indicators with share level green
+      attributes:
+        share_level: green

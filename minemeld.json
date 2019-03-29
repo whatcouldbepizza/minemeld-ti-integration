@@ -1,0 +1,17 @@
+{
+    "version": "0.5",
+    "name": "gib-miner",
+    "author": "Group-IB",
+    "author_email": "dmitriy.v@group-ib.com.com",
+    "description": "Group-IB Threat Intelligence feeds mienr",
+    "url": "https://gitlab.soc.group-ib.com/d.d.volkov/minemeld-ti-integration",
+    "entry_points": {
+        "minemeld_nodes": {
+            "gibminer.Miner": "gibminer.node:Miner"
+        },
+        "minemeld_prototypes": {
+            "gibminer.prototypes": "gibminer:prototypes"
+        }
+    },
+    "manifest_version": 0
+}
