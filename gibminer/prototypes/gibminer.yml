@@ -3,7 +3,7 @@ description: >
   Sample extension for MineMeld.
 
 prototypes:
-  eevblog:
+  feedpoller:
     author: Group-IB
     class: gibminer.Miner
     development_status: EXPERIMENTAL
