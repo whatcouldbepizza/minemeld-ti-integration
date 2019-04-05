@@ -35,6 +35,14 @@ class Miner(BasePollerFT):
 		if self.api_key is None:
 			raise ValueError("API_KEY is required")
 
+		self.proxies = dict()
+		config_proxy = self.config.get('proxy', None)
+		if config_proxy is not None and config_proxy["address"] is not None:
+			self.proxies["http"] = 'http://' + config_proxy["address"] + ':' + str(config_proxy["port"]) if config_proxy["username"] is None else \
+				'http://' + config_proxy["username"] + ':' + config_proxy["password"] + '@' + config_proxy["address"] + ':' + str(config_proxy["port"])
+			self.proxies["https"] = config_proxy["protocol"] + "://" + config_proxy["address"] + ":" + str(config_proxy["port"]) if config_proxy["username"] is None else \
+				config_proxy["protocol"] + "://" + config_proxy["username"] + ":" + config_proxy["password"] + "@" + config_proxy["address"] + ":" + str(config_proxy["port"])
+
 
 	def _process_item(self, item):
 		"""
@@ -112,7 +120,7 @@ class Miner(BasePollerFT):
 
 		while True:
 			request_url = "{}?module=get&action={}&limit={}&last={}".format(self.url, feed, limit, last)
-			response = requests.get(request_url, headers=headers)
+			response = requests.get(request_url, headers=headers, proxies=self.proxies)
 
 			try:
 				response.raise_for_status()

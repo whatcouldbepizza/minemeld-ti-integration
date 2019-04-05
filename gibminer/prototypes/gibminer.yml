@@ -26,9 +26,17 @@ prototypes:
       verify_cert: false
       last_file: /home/last.yml
       feeds: accs, cards, imei, mules, ddos, domain, ssl, phishing, advert, mobileapp, phishingkit, tornodes, proxy, socks, leaks, threats
-      url: https://bt.group-ib.com/
-      api_username: <API_USERNAME>
-      api_key: <API_KEY>
+      url: https://bt-demo.group-ib.com/
+      api_username: demo.tech1@demo.com
+      api_key: JZ8QxxZdNJvrKJgeyymW
+      # proxy settings
+      # leave empty if no proxy
+      proxy: 
+        protocol: 
+        address: 
+        port: 
+        username: 
+        password: 
       # age out of indicators
       # disabled, removed when they disappear from the channel
       age_out:
